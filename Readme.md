@@ -217,6 +217,34 @@ ____________Sharing images on docker hub
 
 
 
+__________________Docker
+Remove Unused Data (docker system prune)
+-docker system prune
+-docker system prune --volumes
+-docker image prune -a
+-docker volume prune
+-docker network prune
+-docker builder prune
+
+
+restart all stopped containers
+sudo docker restart $(sudo docker ps -a -q)
+
+cd deployments/docker
+sudo docker-compose up  ### to be used on special occasions
+sudo docker-compose up  ms-job-manager
+
+###Incase of conflicts
+sudo docker stop a0b8e8d53538884a0a58c84ef7c6cc23157a0612bebd2404344e2ff8aa50597e
+sudo docker rm a0b8e8d53538884a0a58c84ef7c6cc23157a0612bebd2404344e2ff8aa50597e
+
+view the docker logs
+sudo docker logs 107da727f534
+
+
+
+
+
 
 
 
